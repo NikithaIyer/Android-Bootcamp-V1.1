@@ -14,10 +14,10 @@ public class ProductDescription extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product);
         Intent intent = getIntent();
-        String resultValue = intent.getStringExtra("result");
-
-        TextView resultView = (TextView) findViewById(R.id.title);
-        resultView.setText(resultValue);
+//        String resultValue = intent.getStringExtra("result");
+//
+//        TextView resultView = (TextView) findViewById(R.id.title);
+//        resultView.setText((CharSequence) resultView);
 
     }
 
