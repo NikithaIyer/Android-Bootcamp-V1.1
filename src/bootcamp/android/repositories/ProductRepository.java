@@ -14,13 +14,4 @@ public class ProductRepository {
         products.add(new Product("TITLE3","DESC3"));
         return products;
     }
-    public List<String> getProductsTitle() {
-        List<Product> productsList = getProducts();
-        List<String> stringList = new ArrayList<String>();
-        for (Product product : productsList){
-
-        stringList.add(product.toString());
-        }
-        return stringList;
-    }
 }
