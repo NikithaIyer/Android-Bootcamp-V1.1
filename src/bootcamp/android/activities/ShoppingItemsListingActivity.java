@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
+import bootcamp.android.GridViewCustomAdapter;
 import bootcamp.android.R;
 import bootcamp.android.models.Product;
 import bootcamp.android.repositories.ProductRepository;
@@ -33,7 +34,8 @@ public class ShoppingItemsListingActivity extends Activity {
 //            layout.addView(view);
 //        }
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,productRepository.getProductsTitle());
+//        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,productRepository.getProductsTitle());
+        GridViewCustomAdapter arrayAdapter = new GridViewCustomAdapter(this,products);
         GridView gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(arrayAdapter);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -45,6 +47,8 @@ public class ShoppingItemsListingActivity extends Activity {
 
             }
         });
+
+
     }
 
 
